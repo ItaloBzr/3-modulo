@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#040000"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/fundo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"/>
+    <ImageView android:id="@+id/executar_video"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/play"
+        app:layout_constraintTop_toTopOf="@id/image_view"
+        app:layout_constraintBottom_toBottomOf="@id/image_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView android:id="@+id/txt_netflix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NETFLIX"
+        android:textSize="18sp"
+        android:textColor="#D50B0B"
+        app:layout_constraintTop_toBottomOf="@id/image_view"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="10sp"/>
+
+    <TextView android:id="@+id/txt_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rick and Morty"
+        app:layout_constraintTop_toBottomOf="@id/txt_netflix"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="5sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="28sp"/>
+
+    <TextView android:id="@+id/txt_temporada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2013  1 Temporada"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/txt_titulo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="10dp"/>
+
+    <RatingBar
+        android:id="@+id/rating_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="8dp"
+        android:numStars="5"
+        android:progressTint="@color/white"
+        android:rating="3.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_temporada" />
+
+    <TextView android:id="@+id/txt_descricao"
+        android:layout_width="match_parent"
+        android:text="Rick and Morty é uma animação adulta de ficção científica que segue as aventuras interdimensionais do cientista genial e alcoólatra, Rick Sanchez e seu neto inseguro, Moty Smith. A trama combina humor ácido e dramas familiares com viagens pelo multiverso, explora temas filosóficos como niilismo, e foca na busca de Rick por vingança contra uma versão alternativa de si mesmo (Rick Prime) que destruiu a sua vida.
+"
+        android:justificationMode="inter_word"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/rating_bar"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
