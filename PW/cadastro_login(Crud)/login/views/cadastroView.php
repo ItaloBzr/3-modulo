@@ -1,0 +1,32 @@
+<html lang="pt-br">
+    <head>
+        <!--Serve par setar o UNICODE do site para o usado em PT-BR-->
+        <meta charset="UTF-8"/> 
+        <title>Tela de Login</title>
+        
+        <!--vinculando a tela, com o CSS para estilizar a página-->
+        <link rel="stylesheet" type="text/css" href="../css/index.css">
+        
+    </head>
+    <body>
+        <!--Essa div, representa onde todo o conteúdo do site vai ficar-->
+        <div class="container-principal">
+            <div class="formulario">
+                <form method="post" action="../php/cadastrar.php">
+                    <input type="text"     placeholder="Usuário:" name = "nome" required="true" minlength="3" maxlength="30">
+                    <input type="text"     placeholder="Email:"   name = "email"   required="true" minlength="3" maxlength="100">
+                    <input type="password" placeholder="Senha:"   name = "senha"   required="true" minlength="3" maxlength="8">
+
+                    <?php
+                        if (isset($_GET['msg'])) {
+                            echo "<p style='color: red;'>" . htmlspecialchars($_GET['msg']) . "</p>";
+                        }
+                    ?>
+                    
+                    <input type="submit" value="Cadastrar">
+                </form>             
+                <a href="../index.php">Já tem conta? <span>Clique aqui</span></a>
+            </div>
+        </div>
+    </body>
+</html>
