@@ -1,0 +1,31 @@
+10: vendedores faixa comissão = a ou b
+SELECT * FROM vendedor 
+WHERE faixa_comiss IN ("a", "b");
+
+11: endereço = null
+SELECT * FROM cliente 
+WHERE endereco IS NULL;
+
+12: vendedores e salarios fixos, ordem alfabetica vendedores
+SELECT nome_vend, sal_fixo 
+FROM vendedor 
+ORDER BY nome_vend, 1 ASC;
+
+13:
+SELECT uf, cidade, nome_cli 
+FROM cliente 
+ORDER BY (uf, cidade) (1, 2) DESC;
+
+14: 
+SELECT desc_prod, val_unit 
+FROM produto 
+WHERE unid_prod = 'kg' 
+ORDER BY (val_unit, 2) DESC;
+
+15:
+SELECT nome_vend, sal_fixo, (120.00 + (sal_fixo * 0.75)) as novo_salario_fixo , faixa_comiss
+FROM vendedor 
+WHERE faixa_comiss = 'c'
+ORDER BY nome_vend;
+
+
